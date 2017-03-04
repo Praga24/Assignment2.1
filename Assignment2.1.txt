@@ -1,0 +1,229 @@
+1. Write a java code with the class named ‘acad’ and a method ‘main’. Hardcode the program
+with two integers and print the sum of those two.
+
+
+package test;
+
+public class acad {
+
+	public static void main(String[] args) {
+		int a=2,b=2;
+		System.out.println("Sum of 2 numbers:"+(a+b));
+
+	}
+
+}
+
+
+2. Rewrite the above code, where, inputs are provided by the user at runtime and the output
+is printed.
+
+package test;
+
+import java.util.Scanner;
+
+public class acad {
+
+	public static void main(String[] args) {
+		int a,b;
+		Scanner in=new Scanner(System.in);
+		a=in.nextInt();
+		b=in.nextInt();
+		System.out.println("Sum of 2 numbers:"+(a+b));
+
+	}
+
+}
+
+
+
+3. Write a program with method name sum() that accepts two parameters from user and print
+the sum two numbers
+
+
+acad.java
+
+package test;
+
+import java.util.Scanner;
+
+public class acad {
+
+	public static void main(String[] args) {
+		int a,b;
+		Scanner in=new Scanner(System.in);
+		a=in.nextInt();
+		b=in.nextInt();
+		sum s=new sum(a,b);
+		
+
+	}
+}
+
+
+sum.java
+
+package test;
+
+public class sum
+{
+sum(int a,int b)
+{
+	System.out.println("First number is:"+a);
+	System.out.println("Second number is:"+b);
+	System.out.println("Sum is:"+(a+b));
+}
+}
+
+
+4.Write a program to accepts two numbers from stdin and find all the odd as well as even
+numbers present in between them.
+
+
+package test;
+
+import java.util.Scanner;
+
+public class acad {
+
+	public static void main(String[] args) {
+		int a,b;
+		Scanner in=new Scanner(System.in);
+		a=in.nextInt();
+		b=in.nextInt();
+		for(int i=a+1;i<b;i++)
+		{
+			if(i%2==0)
+				System.out.println("Even "+i);
+			else
+				System.out.println("Odd "+i);
+		}
+		
+
+	}
+}
+
+
+
+
+5.Joe is scared to go to school. When her dad asked the reason, Joe said she is unable to complete
+the task given by her teacher. The task was to find the “first 10 multiples” of the number entered
+from stdin. 
+
+package test;
+
+import java.util.Scanner;
+
+public class acad {
+
+	public static void main(String[] args) {
+		int a;
+		Scanner in=new Scanner(System.in);
+		a=in.nextInt();
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(a+"x"+i+"="+(a*i));
+		}
+
+	}
+}
+
+
+
+6.Write a program consisting method sum() and demonstrate the concept of method
+overloading using this method.
+
+
+acad.java
+
+package test;
+
+import java.util.Scanner;
+
+public class acad {
+
+	public static void main(String[] args) {
+		int a;
+		ex e=new ex();
+		e.sum(1,2);
+		e.sum(1.1,2.2);  
+	}
+}
+
+
+
+ex.java
+
+package test;
+
+public class ex
+{
+public void sum(int a,int b)
+{
+	System.out.println("Int Sum is:"+(a+b));
+}
+
+public void sum(double a,double b)
+{
+	System.out.println("Double Sum is:"+(a+b));
+}
+}
+
+
+
+
+7.Can you overload a method with the same return type? Explain your answer with proper logic.
+
+
+Yes we can overload a method with same return type but the type or number of parameters should be different.
+The methods can be overloaded 
+1.By changing number of arguments
+2.By changing the data type of the arguments.
+
+In java, Method Overloading is not possible by changing the return type of the method only.
+
+
+
+
+
+8.Write a program in java using Arrays that sorts the element in descending order.
+
+
+
+package test;
+
+import java.util.Scanner;
+public class acad
+{
+    public static void main(String[] args) 
+    {
+        int n, temp;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter no. of elements:");
+        n = in.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter the elements:");
+        for (int i=0; i < n; i++) 
+        {
+            a[i] = in.nextInt();
+        }
+        for (int i = 0; i < n; i++) 
+        {
+            for (int j = i + 1; j < n; j++) 
+            {
+                if (a[i] < a[j]) 
+                {
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+            }
+        }
+        System.out.print("Result ");
+        for (int i = 0; i < n; i++) 
+        {
+            System.out.print(a[i]+" ");
+        }
+        
+    }
+}
